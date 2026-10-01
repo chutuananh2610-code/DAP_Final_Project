@@ -1,0 +1,66 @@
+{
+  "source": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_20260912_163121.csv",
+  "cleaned_paths": {
+    "csv": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_cleaned_20260912_163121.csv",
+    "json": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_cleaned_20260912_163121.json",
+    "parquet": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_cleaned_20260912_163121.parquet"
+  },
+  "audit_path": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\interim\\eda_audit_20260912_163121.csv",
+  "missing_policy_path": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\eda\\missing_policy_20260912_163121.csv",
+  "feature_availability_path": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\eda\\feature_availability_20260912_163121.csv",
+  "report_path": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\docs\\BT3_submission.md",
+  "figures": {
+    "executive_dashboard": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\00_executive_dashboard.png",
+    "price_distribution": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\01_price_distribution.png",
+    "area_distribution": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\02_area_distribution.png",
+    "property_type_distribution": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\03_property_type_distribution.png",
+    "price_m2_by_property_type": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\04_price_m2_by_property_type.png",
+    "price_m2_by_area": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\05_price_m2_by_area.png",
+    "price_vs_area": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\06_price_vs_area.png",
+    "listing_count_by_area": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\07_listing_count_by_area.png",
+    "median_price_m2_by_area": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\08_median_price_m2_by_area.png",
+    "correlation_heatmap": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\09_correlation_heatmap.png",
+    "cleaning_summary": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\10_cleaning_summary.png",
+    "missingness_profile": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\11_missingness_profile.png",
+    "market_positioning": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\12_market_positioning.png",
+    "interactive_treemap": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\13_market_treemap.html",
+    "interactive_price_area": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\14_price_area_interactive.html"
+  },
+  "diagnostics": {
+    "input_rows": 6452,
+    "structural_non_listing_rows": 304,
+    "rows_after_structural_filter": 6148,
+    "property_type_unknown_before": 1583,
+    "property_type_refined_rows": 1001,
+    "property_type_unknown_cleaned": 282,
+    "outlier_price_log_rows": 32,
+    "outlier_area_log_rows": 77,
+    "outlier_price_per_m2_log_rows": 131,
+    "robust_outlier_rows_removed": 62,
+    "cleaned_rows": 6086,
+    "retained_pct": 94.33,
+    "area_definition_risk_rows_cleaned": 467
+  },
+  "model_v1_features": {
+    "numeric": [
+      "area_m2",
+      "log_area_m2"
+    ],
+    "categorical": [
+      "property_type",
+      "legacy_area"
+    ]
+  },
+  "insights": [
+    "Sau kiểm soát chất lượng còn 6,086 listing; loại 304 URL hồ sơ môi giới và 62 ngoại lai mạnh.",
+    "Giá rao bán lệch phải: trung vị 9.50 tỷ VNĐ, phân vị 95% 98.30 tỷ. Phân tích log giúp hạn chế vài listing giá rất cao lấn át phần lớn thị trường.",
+    "Diện tích cũng có đuôi dài: trung vị 83.0 m², phân vị 95% 542.2 m². Vì vậy ngoại lai được đánh dấu trên log-scale thay vì cắt bằng một ngưỡng tuyệt đối.",
+    "house là loại hình lớn nhất (67.2%). Sau tái phân loại bằng title/URL, unknown còn 4.6%.",
+    "Trong khu vực có ít nhất 30 tin, Quận 1 có trung vị giá/m² cao nhất (445.6 triệu), còn Huyện Củ Chi thấp nhất (7.3 triệu). Đây là mô tả giá rao bán, không phải kết luận nhân quả.",
+    "Tương quan Spearman giữa diện tích và tổng giá là 0.53; diện tích có thông tin dự báo nhưng không đủ để giải thích toàn bộ giá.",
+    "7.7% bản ghi cleaned mang cờ area_definition_risk. Bước modeling cần theo dõi riêng vì area_m2 ở nhà phố đôi khi có thể phản ánh diện tích sàn thay vì diện tích đất."
+  ],
+  "static_chart_count": 13,
+  "interactive_chart_count": 2,
+  "gate_passed": true
+}

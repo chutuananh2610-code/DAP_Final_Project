@@ -1,0 +1,22 @@
+{
+  "source": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_cleaned_20260912_163121.parquet",
+  "rows": 6086,
+  "columns": 36,
+  "target": "price_vnd",
+  "target_missing": 0,
+  "target_nonpositive": 0,
+  "duplicate_listing_id": 0,
+  "numeric_features": [
+    "area_m2"
+  ],
+  "categorical_features": [
+    "property_type",
+    "legacy_area"
+  ],
+  "model_features": [
+    "area_m2",
+    "property_type",
+    "legacy_area"
+  ],
+  "feature_count": 3
+}

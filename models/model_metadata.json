@@ -1,0 +1,73 @@
+{
+  "business_question": "Dự đoán giá rao bán BĐS tại TP.HCM",
+  "target": "price_vnd",
+  "input_dataset": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\data\\processed\\hcm_realestate_cleaned_20260912_163121.parquet",
+  "input_rows": 6086,
+  "train_rows": 4868,
+  "test_rows": 1218,
+  "random_state": 42,
+  "cv_folds": 5,
+  "numeric_features": [
+    "area_m2"
+  ],
+  "categorical_features": [
+    "property_type",
+    "legacy_area"
+  ],
+  "categories": {
+    "property_type": [
+      "apartment",
+      "commercial",
+      "house",
+      "land",
+      "unknown",
+      "villa"
+    ],
+    "legacy_area": [
+      "Huyện Bình Chánh",
+      "Huyện Cần Giờ",
+      "Huyện Củ Chi",
+      "Huyện Hóc Môn",
+      "Huyện Nhà Bè",
+      "Quận 1",
+      "Quận 10",
+      "Quận 11",
+      "Quận 12",
+      "Quận 3",
+      "Quận 4",
+      "Quận 5",
+      "Quận 6",
+      "Quận 7",
+      "Quận 8",
+      "Quận Bình Thạnh",
+      "Quận Bình Tân",
+      "Quận Gò Vấp",
+      "Quận Phú Nhuận",
+      "Quận Tân Bình",
+      "Quận Tân Phú",
+      "TP Thủ Đức"
+    ]
+  },
+  "numeric_ranges": {
+    "area_m2": {
+      "min": 1.0,
+      "median": 83.0,
+      "max": 290000.0
+    }
+  },
+  "final_model": "Random Forest",
+  "selection_rule": "Lowest mean CV MAE among non-baseline candidates; holdout used for final evaluation.",
+  "best_params": {
+    "model__n_estimators": 160,
+    "model__min_samples_leaf": 8,
+    "model__max_features": 0.7,
+    "model__max_depth": null
+  },
+  "test_mae": 16576210678.331291,
+  "test_rmse": 47707332466.76688,
+  "test_r2": 0.4507377879174297,
+  "cv_mae_mean": 16955951532.677984,
+  "cv_mae_std": 1761197043.0955193,
+  "artifact": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\models\\best_price_model.joblib",
+  "disclaimer": "Ước tính từ giá rao CafeLand; không phải chứng thư thẩm định giá."
+}

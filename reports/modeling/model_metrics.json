@@ -1,0 +1,126 @@
+{
+  "final_model": "Random Forest",
+  "comparison": [
+    {
+      "Model": "Random Forest",
+      "CV_MAE_mean": 16955951532.677984,
+      "CV_MAE_std": 1761197043.0955193,
+      "Train_MAE": 15037906873.687365,
+      "Test_MAE": 16576210678.331291,
+      "Train_RMSE": 43414314167.75166,
+      "Test_RMSE": 47707332466.76688,
+      "Train_R2": 0.560304589337365,
+      "Test_R2": 0.4507377879174297,
+      "Generalization_gap_MAE": 1538303804.6439266,
+      "Training_time_seconds": 1.4844,
+      "Tuned_with_CV": true
+    },
+    {
+      "Model": "Decision Tree",
+      "CV_MAE_mean": 17175935518.178823,
+      "CV_MAE_std": 1667597542.829411,
+      "Train_MAE": 15158802839.546494,
+      "Test_MAE": 18038136613.014492,
+      "Train_RMSE": 44083249370.8937,
+      "Test_RMSE": 51667542685.93491,
+      "Train_R2": 0.5466503957898124,
+      "Test_R2": 0.35576388400916925,
+      "Generalization_gap_MAE": 2879333773.4679985,
+      "Training_time_seconds": 1.5861,
+      "Tuned_with_CV": true
+    },
+    {
+      "Model": "Dummy Median",
+      "CV_MAE_mean": 22581884915.448105,
+      "CV_MAE_std": 1335282849.1038976,
+      "Train_MAE": 22581587078.8825,
+      "Test_MAE": 23775641871.92118,
+      "Train_RMSE": 67964210270.937904,
+      "Test_RMSE": 67219262038.027306,
+      "Train_R2": -0.07757273193300906,
+      "Test_R2": -0.09042784860405373,
+      "Generalization_gap_MAE": 1194054793.038681,
+      "Training_time_seconds": 0.0222,
+      "Tuned_with_CV": false
+    },
+    {
+      "Model": "Ridge",
+      "CV_MAE_mean": 24807997000.953186,
+      "CV_MAE_std": 1104986914.5652711,
+      "Train_MAE": 24591147936.03722,
+      "Test_MAE": 25906921967.791397,
+      "Train_RMSE": 59509575227.39489,
+      "Test_RMSE": 59368005379.920364,
+      "Train_R2": 0.17384840827578818,
+      "Test_R2": 0.14942156093668313,
+      "Generalization_gap_MAE": 1315774031.754177,
+      "Training_time_seconds": 2.816,
+      "Tuned_with_CV": true
+    },
+    {
+      "Model": "Linear Regression",
+      "CV_MAE_mean": 25182500537.76907,
+      "CV_MAE_std": 1111674758.7767947,
+      "Train_MAE": 24912196017.28451,
+      "Test_MAE": 26285838048.245304,
+      "Train_RMSE": 59464390781.60462,
+      "Test_RMSE": 59355965241.6711,
+      "Train_R2": 0.1751024931858277,
+      "Test_R2": 0.14976652935731516,
+      "Generalization_gap_MAE": 1373642030.9607925,
+      "Training_time_seconds": 0.0119,
+      "Tuned_with_CV": false
+    }
+  ],
+  "tuning": {
+    "Dummy Median": {
+      "best_params": {},
+      "fit_seconds": 0.0222,
+      "tuned_with_cv": false
+    },
+    "Linear Regression": {
+      "best_params": {},
+      "fit_seconds": 0.0119,
+      "tuned_with_cv": false
+    },
+    "Ridge": {
+      "best_params": {
+        "model__alpha": 10.0
+      },
+      "best_cv_mae": 24807997000.953186,
+      "fit_seconds": 2.816,
+      "tuned_with_cv": true
+    },
+    "Decision Tree": {
+      "best_params": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 10,
+        "model__min_samples_split": 2
+      },
+      "best_cv_mae": 17175935518.178823,
+      "fit_seconds": 1.5861,
+      "tuned_with_cv": true
+    },
+    "Random Forest": {
+      "best_params": {
+        "model__n_estimators": 160,
+        "model__min_samples_leaf": 8,
+        "model__max_features": 0.7,
+        "model__max_depth": null
+      },
+      "best_cv_mae": 16955951532.677984,
+      "fit_seconds": 1.4844,
+      "tuned_with_cv": true
+    }
+  },
+  "figures": {
+    "actual_vs_predicted": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\15_model_actual_vs_predicted.png",
+    "residual_distribution": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\16_model_residual_distribution.png",
+    "residual_vs_predicted": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\17_model_residual_vs_predicted.png",
+    "model_comparison": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\18_model_comparison.png",
+    "ridge_learning_curve": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\19_ridge_learning_curve.png",
+    "nonlinear_learning_curve": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\20_nonlinear_learning_curve.png",
+    "permutation_importance": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\21_permutation_importance.png",
+    "error_by_property_type": "C:\\Users\\LEGION\\Downloads\\DAP_Final_Project_BT1_BT2\\DAP_Final_Project\\reports\\figures\\22_error_by_property_type.png"
+  }
+}

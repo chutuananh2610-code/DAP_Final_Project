@@ -1,0 +1,171 @@
+COMPILE RETURN CODE: 0
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+
+
+PYTEST RETURN CODE: 0
+STDOUT:
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                    [100%][0m
+[32m[32m[1m5 passed[0m[32m in 0.24s[0m[0m
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+
+
+SAMPLE PIPELINE RETURN CODE: 0
+STDOUT:
+{
+  "raw_quality": {
+    "rows": 13,
+    "columns": 11,
+    "duplicate_listing_id": 0,
+    "missing_rate": {
+      "bedrooms_text": 0.38461538461538464,
+      "url": 0.0,
+      "source": 0.0,
+      "listing_id": 0.0,
+      "listing_date": 0.0,
+      "price_text": 0.0,
+      "title": 0.0,
+      "area_text": 0.0,
+      "location_text": 0.0,
+      "description": 0.0,
+      "property_type": 0.0
+    },
+    "dtypes": {
+      "source": "object",
+      "url": "object",
+      "listing_id": "int64",
+      "listing_date": "object",
+      "title": "object",
+      "price_text": "object",
+      "area_text": "object",
+      "bedrooms_text": "object",
+      "location_text": "object",
+      "description": "object",
+      "property_type": "object"
+    }
+  },
+  "interim_quality": {
+    "rows": 13,
+    "columns": 20,
+    "duplicate_listing_id": 0,
+    "missing_rate": {
+      "estimated_land_area_from_title": 0.5384615384615384,
+      "bedrooms_text": 0.38461538461538464,
+      "source": 0.0,
+      "url": 0.0,
+      "listing_date": 0.0,
+      "listing_id": 0.0,
+      "price_text": 0.0,
+      "title": 0.0,
+      "location_text": 0.0,
+      "description": 0.0,
+      "property_type": 0.0,
+      "area_text": 0.0,
+      "price_vnd": 0.0,
+      "area_m2": 0.0,
+      "current_ward": 0.0,
+      "scope_status": 0.0,
+      "legacy_area": 0.0,
+      "price_valid": 0.0,
+      "area_valid": 0.0,
+      "area_definition_risk": 0.0
+    },
+    "dtypes": {
+      "source": "object",
+      "url": "object",
+      "listing_id": "int64",
+      "listing_date": "datetime64[ns]",
+      "title": "object",
+      "price_text": "object",
+      "area_text": "object",
+      "bedrooms_text": "object",
+      "location_text": "object",
+      "description": "object",
+      "property_type": "object",
+      "price_vnd": "float64",
+      "area_m2": "float64",
+      "scope_status": "object",
+      "current_ward": "object",
+      "legacy_area": "object",
+      "price_valid": "bool",
+      "area_valid": "bool",
+      "area_definition_risk": "bool",
+      "estimated_land_area_from_title": "float64"
+    }
+  },
+  "processed_quality": {
+    "rows": 12,
+    "columns": 20,
+    "duplicate_listing_id": 0,
+    "missing_rate": {
+      "estimated_land_area_from_title": 0.5,
+      "bedrooms_text": 0.4166666666666667,
+      "source": 0.0,
+      "url": 0.0,
+      "listing_date": 0.0,
+      "listing_id": 0.0,
+      "price_text": 0.0,
+      "title": 0.0,
+      "location_text": 0.0,
+      "description": 0.0,
+      "property_type": 0.0,
+      "area_text": 0.0,
+      "price_vnd": 0.0,
+      "area_m2": 0.0,
+      "current_ward": 0.0,
+      "scope_status": 0.0,
+      "legacy_area": 0.0,
+      "price_valid": 0.0,
+      "area_valid": 0.0,
+      "area_definition_risk": 0.0
+    },
+    "dtypes": {
+      "source": "object",
+      "url": "object",
+      "listing_id": "int64",
+      "listing_date": "datetime64[ns]",
+      "title": "object",
+      "price_text": "object",
+      "area_text": "object",
+      "bedrooms_text": "object",
+      "location_text": "object",
+      "description": "object",
+      "property_type": "object",
+      "price_vnd": "float64",
+      "area_m2": "float64",
+      "scope_status": "object",
+      "current_ward": "object",
+      "legacy_area": "object",
+      "price_valid": "bool",
+      "area_valid": "bool",
+      "area_definition_risk": "bool",
+      "estimated_land_area_from_title": "float64"
+    }
+  }
+}
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+

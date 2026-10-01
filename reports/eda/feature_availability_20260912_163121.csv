@@ -1,0 +1,11 @@
+﻿feature,present,non_null_rate,dtype
+area_m2,True,1.0,float64
+log_area_m2,True,1.0,float64
+property_type,True,1.0,str
+legacy_area,True,1.0,str
+bedrooms,False,0.0,
+bathrooms,False,0.0,
+floors,False,0.0,
+road_width_m,False,0.0,
+legal_status,False,0.0,
+direction,False,0.0,

@@ -1,0 +1,61 @@
+project:
+  name: "DAP Final Project - BQ01"
+  team: 4
+  target: "price_vnd"
+  transaction_type: "sale"
+
+scope:
+  geography_mode: "pre_2025_hcm_boundary"
+  current_city_label: "TP. Hồ Chí Minh"
+  keep_scope_status:
+    - "confirmed_by_current_ward"
+    - "confirmed_by_legacy_text"
+
+acquisition:
+  base_url: "https://nhadat.cafeland.vn"
+  first_page_url: "https://nhadat.cafeland.vn/nha-dat-ban-tai-tp-ho-chi-minh/"
+  page_url_template: "https://nhadat.cafeland.vn/nha-dat-ban-tai-tp-ho-chi-minh/page-{page}/"
+  target_raw_records: 6500
+  minimum_valid_records: 5000
+  max_pages: 500
+  timeout_seconds: 30
+  min_delay_seconds: 1.5
+  max_delay_seconds: 3.0
+  save_every_pages: 10
+  user_agent: "DAP-Final-Project-AcademicCrawler/1.0 (Chu Tuan Anh)"
+  respect_robots: true
+  robots_fail_closed: true
+  enrich_details_default: false
+  include_expired: false
+
+quality:
+  required_columns:
+    - source
+    - url
+    - listing_id
+    - title
+    - price_text
+    - area_text
+    - location_text
+    - property_type
+    - listing_date
+  target_column: "price_vnd"
+
+eda:
+  iqr_multiplier: 3.0
+  outlier_min_group_size: 30
+  outlier_votes_to_remove: 2
+  non_listing_path_tokens:
+    - "/moi-gioi/"
+  minimum_cleaned_records: 5000
+  top_n_areas: 15
+  min_area_group_count: 30
+  feature_min_non_null_rate: 0.70
+  figure_dpi: 200
+
+modeling:
+  test_size: 0.20
+  random_state: 42
+  cv_folds: 5
+  feature_min_non_null_rate: 0.70
+  permutation_repeats: 8

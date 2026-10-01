@@ -1,0 +1,7 @@
+﻿column,missing_count,missing_rate_pct,mechanism,action
+description,6086,100.0,Structural/MNAR-like,Card-only crawl does not expose description; do not impute. Exclude from model v1 unless detail enrichment is run.
+listing_date,6086,100.0,Structural/MNAR-like,Card-only crawl does not expose a reliable listing date; do not impute. Temporal modeling is deferred.
+estimated_land_area_from_title,4166,68.45,MNAR-like,Available only when a title contains explicit dimensions; use as QA only.
+update_text,457,7.51,MAR/collection-layout,Keep missing as missing. Not used in model v1.
+current_ward,358,5.88,MAR relative to scope mapping,Keep missing; legacy_area is used for district grouping.
+location_text,301,4.95,MAR/collection-layout,Use validated legacy_area for district-level EDA.

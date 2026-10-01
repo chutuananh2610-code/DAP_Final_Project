@@ -1,0 +1,37 @@
+﻿feature,dtype,missing_rate,cardinality,used_in_model,role,reason
+area_m2,float64,0.0,1209,True,model_feature,"Đủ availability, có ý nghĩa dự báo và không gây target leakage."
+legacy_area,str,0.0,22,True,model_feature,"Đủ availability, có ý nghĩa dự báo và không gây target leakage."
+property_type,str,0.0,6,True,model_feature,"Đủ availability, có ý nghĩa dự báo và không gây target leakage."
+area_size_band,category,0.0,4,False,excluded,Không thuộc feature set đã khóa cho model v1.
+area_text,str,0.0,1529,False,excluded,Không thuộc feature set đã khóa cho model v1.
+crawl_page,int64,0.0,350,False,excluded,Không thuộc feature set đã khóa cho model v1.
+crawled_at,str,0.0,1,False,excluded,Không thuộc feature set đã khóa cho model v1.
+current_ward,str,0.0588,102,False,excluded,Không thuộc feature set đã khóa cho model v1.
+description,float64,1.0,0,False,excluded,Text có thể chứa trực tiếp giá/giá m² và làm model học lại nhãn; loại ở model v1.
+is_non_listing_url,bool,0.0,1,False,excluded,Không thuộc feature set đã khóa cho model v1.
+is_robust_outlier,bool,0.0,1,False,excluded,Không thuộc feature set đã khóa cho model v1.
+listing_date,float64,1.0,0,False,excluded,Không thuộc feature set đã khóa cho model v1.
+listing_id,int64,0.0,6086,False,excluded,Identifier không có ý nghĩa dự báo ổn định và có nguy cơ memorization.
+location_text,str,0.0495,5483,False,excluded,Không thuộc feature set đã khóa cho model v1.
+log_price_per_m2,float64,0.0,3981,False,excluded,Giá/m² chứa price_vnd trong công thức; dùng làm X sẽ lộ target.
+log_price_vnd,float64,0.0,1177,False,excluded,Biến đổi trực tiếp từ price_vnd; là target leakage.
+outlier_area_log,bool,0.0,2,False,excluded,Không thuộc feature set đã khóa cho model v1.
+outlier_price_log,bool,0.0,2,False,excluded,Không thuộc feature set đã khóa cho model v1.
+outlier_price_per_m2_log,bool,0.0,2,False,excluded,Không thuộc feature set đã khóa cho model v1.
+outlier_vote_count,int64,0.0,2,False,excluded,Không thuộc feature set đã khóa cho model v1.
+price_billion,float64,0.0,1177,False,excluded,Biến đổi trực tiếp từ price_vnd; là target leakage.
+price_per_m2_million,float64,0.0,3988,False,excluded,Giá/m² chứa price_vnd trong công thức; dùng làm X sẽ lộ target.
+price_per_m2_vnd,float64,0.0,3988,False,excluded,Giá/m² chứa price_vnd trong công thức; dùng làm X sẽ lộ target.
+price_text,str,0.0,1707,False,excluded,Raw text biểu diễn chính target giá; dùng làm X sẽ lộ trực tiếp nhãn.
+property_type_refined,bool,0.0,2,False,excluded,Không thuộc feature set đã khóa cho model v1.
+source,str,0.0,1,False,excluded,Không thuộc feature set đã khóa cho model v1.
+title,str,0.0,5893,False,excluded,Text có thể chứa trực tiếp giá/giá m² và làm model học lại nhãn; loại ở model v1.
+update_text,str,0.0751,1827,False,excluded,Không thuộc feature set đã khóa cho model v1.
+url,str,0.0,6086,False,excluded,Identifier không có ý nghĩa dự báo ổn định và có nguy cơ memorization.
+log_area_m2,float64,0.0,1209,False,exploratory,Biến đổi phục vụ EDA; không dùng mặc định cùng area_m2 để tránh dư thừa/đa cộng tuyến.
+area_definition_risk,bool,0.0,2,False,qa_only,"Cờ kiểm soát chất lượng, dùng audit/error analysis thay vì predictor v1."
+area_valid,bool,0.0,1,False,qa_only,"Cờ kiểm soát chất lượng, dùng audit/error analysis thay vì predictor v1."
+estimated_land_area_from_title,float64,0.6845,574,False,qa_only,"Cờ kiểm soát chất lượng, dùng audit/error analysis thay vì predictor v1."
+price_valid,bool,0.0,1,False,qa_only,"Cờ kiểm soát chất lượng, dùng audit/error analysis thay vì predictor v1."
+scope_status,str,0.0,2,False,qa_only,"Cờ kiểm soát chất lượng, dùng audit/error analysis thay vì predictor v1."
+price_vnd,float64,0.0,1179,False,target,"Biến mục tiêu, không được đưa vào X."

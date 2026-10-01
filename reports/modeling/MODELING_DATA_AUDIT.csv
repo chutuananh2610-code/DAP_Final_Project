@@ -1,0 +1,2 @@
+﻿source,rows,columns,target,target_missing,target_nonpositive,duplicate_listing_id,numeric_features,categorical_features,model_features,feature_count
+C:\Users\LEGION\Downloads\DAP_Final_Project_BT1_BT2\DAP_Final_Project\data\processed\hcm_realestate_cleaned_20260912_163121.parquet,6086,36,price_vnd,0,0,0,['area_m2'],"['property_type', 'legacy_area']","['area_m2', 'property_type', 'legacy_area']",3
